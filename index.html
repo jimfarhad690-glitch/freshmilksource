@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>freshmilksource — Pure, Uncompromised Farm-to-Door Dairy</title>
+  <meta name="description" content="freshmilksource delivers 100% pure, unadulterated, ethically sourced A2 milk and organic dairy in eco-friendly glass bottles within 4 hours of milking.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 5 C30 35, 15 55, 15 72 A35 35 0 0 0 85 72 C85 55, 70 35, 50 5 Z' fill='%2310b981'/><circle cx='50' cy='65' r='12' fill='%23ffffff'/></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              dark: '#0c2214',
+            },
+            milk: {
+              cream: '#FDFBF7',
+              ivory: '#F7F4EB',
+              accent: '#F3EDE2',
+              glass: 'rgba(255, 255, 255, 0.85)',
+            },
+            amberAccent: '#F59E0B'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+          },
+          animation: {
+            'float-slow': 'float 6s ease-in-out infinite',
+            'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s infinite linear',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            pulseSoft: {
+              '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+              '50%': { opacity: '0.88', transform: 'scale(0.98)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-milk-cream text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-brand-dark text-white text-xs py-2 px-4 border-b border-brand-900/50">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2 justify-center">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-brand-500/20 text-brand-300 border border-brand-500/30">
+          MORNING DISPATCH
+        </span>
+        <span class="text-slate-300">Milked at 4:30 AM • Cold-chain doorstep delivery before 7:00 AM guaranteed</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-300">
+        <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-brand-400"></i> Zero Hormones & Preservatives</span>
+        <a href="#trial" class="text-brand-300 hover:text-white font-medium underline underline-offset-2 transition-colors">Claim Free 500ml Trial &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 backdrop-blur-md bg-white/90 border-b border-slate-100 transition-all duration-300" id="main-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-700 via-brand-600 to-brand-400 flex items-center justify-center text-white shadow-md shadow-brand-600/20 group-hover:scale-105 transition-transform duration-300">
+          <!-- Milk drop / leaf custom icon -->
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" fill="white" opacity="0.95"/>
+            <path d="M12 7a5 5 0 0 0-5 5c0 2.22 1.45 4.1 3.5 4.73.5.15 1.5.15 2 0 2.05-.63 3.5-2.51 3.5-4.73 0-2.76-2.24-5-4-5z" fill="#16a34a"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-extrabold text-2xl tracking-tight text-slate-900 leading-none">
+            freshmilk<span class="text-brand-600">source</span>
+          </span>
+          <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400 mt-1">Farm Direct • Pure Dairy</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-brand-700 transition-colors">The Source</a>
+        <a href="#products" class="hover:text-brand-700 transition-colors">Products</a>
+        <a href="#quality" class="hover:text-brand-700 transition-colors">Pure Promise</a>
+        <a href="#calculator" class="hover:text-brand-700 transition-colors">Plan Calculator</a>
+        <a href="#sustainability" class="hover:text-brand-700 transition-colors">Eco Bottles</a>
+        <a href="#faq" class="hover:text-brand-700 transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <button id="cart-btn" class="relative p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:border-brand-500 hover:text-brand-600 transition-all bg-white shadow-sm" aria-label="Open Cart">
+          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+          <span id="cart-badge" class="absolute -top-1.5 -right-1.5 w-5 h-5 bg-brand-600 text-white text-[11px] font-bold rounded-full flex items-center justify-center">0</span>
+        </button>
+
+        <a href="#trial" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-700 text-white font-semibold text-sm shadow-md shadow-brand-700/25 hover:bg-brand-800 active:scale-95 transition-all">
+          <span>Start Daily Delivery</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 hover:text-brand-600" aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-100 bg-white/95 backdrop-blur-md px-6 py-6 space-y-4">
+      <a href="#about" class="block text-slate-700 font-medium hover:text-brand-600 py-1 mobile-nav-link">The Source</a>
+      <a href="#products" class="block text-slate-700 font-medium hover:text-brand-600 py-1 mobile-nav-link">Products</a>
+      <a href="#quality" class="block text-slate-700 font-medium hover:text-brand-600 py-1 mobile-nav-link">Pure Promise</a>
+      <a href="#calculator" class="block text-slate-700 font-medium hover:text-brand-600 py-1 mobile-nav-link">Plan Calculator</a>
+      <a href="#sustainability" class="block text-slate-700 font-medium hover:text-brand-600 py-1 mobile-nav-link">Eco Bottles</a>
+      <a href="#faq" class="block text-slate-700 font-medium hover:text-brand-600 py-1 mobile-nav-link">FAQ</a>
+      <div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
+        <button id="mobile-cart-btn" class="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border border-slate-200 text-slate-800 font-medium">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i> View Cart (<span id="mobile-cart-count">0</span>)
+        </button>
+        <a href="#trial" class="w-full py-3 rounded-xl bg-brand-700 text-white font-semibold text-center shadow-md shadow-brand-700/20 mobile-nav-link">
+          Start Daily Delivery
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Hero Section -->
+  <section class="relative overflow-hidden pt-8 pb-20 lg:py-24 bg-gradient-to-b from-milk-ivory via-milk-cream to-white">
+    <!-- Ambient Organic Blobs -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-brand-100/40 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+    <div class="absolute top-40 right-10 w-[400px] h-[400px] bg-amber-100/30 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Column -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-800 text-xs font-semibold shadow-xs">
+            <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+            <span>100% Raw, Unprocessed A2 Cow & Buffalo Milk</span>
+            <span class="text-brand-400">•</span>
+            <span class="text-brand-700 font-bold">Never Blended</span>
+          </div>
+
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.12]">
+            Pure milk, straight from pasture to your doorstep by <span class="text-brand-700 underline decoration-brand-300 decoration-wavy decoration-2">7:00 AM</span>.
+          </h1>
+
+          <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            No powdered reconstitution. No synthetic hormones. Sourced exclusively from free-roaming, grass-fed native herds and chilled to 4°C within 15 minutes of milking.
+          </p>
+
+          <!-- Action buttons & Trust proof -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#trial" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-700 text-white font-semibold text-base shadow-xl shadow-brand-700/25 hover:bg-brand-800 hover:shadow-brand-800/35 transition-all text-center flex items-center justify-center gap-3">
+              <span>Claim Free 500ml Trial</span>
+              <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
+            </a>
+            
+            <a href="#products" class="w-full sm:w-auto px-7 py-4 rounded-xl border border-slate-300 bg-white/80 backdrop-blur-sm text-slate-700 font-semibold text-base hover:bg-slate-50 hover:border-slate-400 transition-all text-center flex items-center justify-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4 text-slate-500"></i>
+              <span>Explore Products</span>
+            </a>
+          </div>
+
+          <!-- Feature micro-badges -->
+          <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-200/80 max-w-lg mx-auto lg:mx-0 text-left">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-brand-100 flex items-center justify-center text-brand-700 shrink-0">
+                <i data-lucide="snowflake" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs font-semibold text-slate-700 leading-tight">Chilled at 4°C Constant</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-700 shrink-0">
+                <i data-lucide="recycle" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs font-semibold text-slate-700 leading-tight">Sterilized Glass Bottles</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs font-semibold text-slate-700 leading-tight">Daily 24-Point Lab Test</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Column: Visual Stage -->
+        <div class="lg:col-span-5 relative">
+          
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Main Hero Card / Image Frame -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 group">
+              <img 
+                src="https://images.unsplash.com/photo-1527153857715-3908f2ae5e81?auto=format&fit=crop&w=1000&q=80" 
+                alt="Fresh organic milk in vintage glass bottles on wooden dairy counter" 
+                class="w-full h-[460px] object-cover object-center group-hover:scale-105 transition-transform duration-700 brightness-95"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-black/20"></div>
+
+              <!-- Overlay caption -->
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-medium tracking-wide mb-2">
+                  <i data-lucide="map-pin" class="w-3 h-3 text-emerald-400"></i> Valley Meadow Farms • Lot #A2-409
+                </div>
+                <h3 class="text-xl font-bold font-display">Unadulterated. Non-Homogenized.</h3>
+                <p class="text-xs text-slate-200 mt-1">Naturally rich cream layer forms on top, just as nature intended.</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge: Morning Dispatch -->
+            <div class="absolute -top-5 -left-5 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-float-slow">
+              <div class="w-12 h-12 rounded-xl bg-brand-500 text-white flex items-center justify-center font-bold text-lg shadow-sm">
+                <i data-lucide="milk" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="text-[11px] font-bold text-brand-600 uppercase tracking-wider">Freshness Index</div>
+                <div class="text-base font-extrabold text-slate-900">100% Pure Origin</div>
+                <div class="text-[10px] text-slate-400">Tested negative for antibiotics</div>
+              </div>
+            </div>
+
+            <!-- Floating Badge: Customer Count -->
+            <div class="absolute -bottom-6 -right-4 sm:-right-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+              <div class="flex -space-x-2">
+                <img class="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Customer avatar">
+                <img class="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Customer avatar">
+                <img class="inline-block h-9 w-9 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Customer avatar">
+              </div>
+              <div>
+                <div class="flex items-center text-amber-400">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                </div>
+                <div class="text-xs font-bold text-slate-800">4.9/5 from 8,400+ Families</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Statistics / Metrics Ribbon -->
+  <section class="bg-brand-dark text-white py-10 border-y border-brand-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-extrabold font-display text-brand-300">
+            <span class="counter" data-target="15">0</span><span class="text-white"> mins</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 font-medium">Milking to 4°C Chiller</p>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-extrabold font-display text-brand-300">
+            <span class="counter" data-target="0">0</span><span class="text-white">%</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 font-medium">Chemicals or Milk Powder</p>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-extrabold font-display text-brand-300">
+            <span class="counter" data-target="42">0</span><span class="text-white">k+</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 font-medium">Bottles Delivered Weekly</p>
+        </div>
+        <div class="space-y-1">
+          <div class="text-3xl sm:text-4xl font-extrabold font-display text-brand-300">
+            <span class="counter" data-target="99">0</span><span class="text-white">.8%</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 font-medium">On-Time Morning Drop Rate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Source / Story Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Visual Collage -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden shadow-md">
+              <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=600&q=80" alt="Cows grazing on lush green pastures" class="w-full h-56 object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="bg-brand-50 p-6 rounded-2xl border border-brand-100 space-y-2">
+              <i data-lucide="leaf" class="w-6 h-6 text-brand-600"></i>
+              <h4 class="font-bold text-slate-900 text-base">Open-Pasture Raised</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">Our Gir and Sahiwal cows graze freely under open skies with pesticide-free hydroponic grass.</p>
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-8">
+            <div class="bg-amber-50 p-6 rounded-2xl border border-amber-100 space-y-2">
+              <i data-lucide="heart-handshake" class="w-6 h-6 text-amber-600"></i>
+              <h4 class="font-bold text-slate-900 text-base">Ethical Calf-First Rule</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">Milking begins only after calves receive their wholesome share. We practice gentle, compassionate dairying.</p>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-md">
+              <img src="https://images.unsplash.com/photo-1546445317-29f4545e9d53?auto=format&fit=crop&w=600&q=80" alt="Artisanal glass bottles of milk" class="w-full h-56 object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold">
+            Our Origin Story
+          </div>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-snug">
+            We built <span class="text-brand-700">freshmilksource</span> because real milk shouldn't come from a chemical powder plant.
+          </h2>
+          <p class="text-slate-600 leading-relaxed">
+            Most supermarket milk undergoes severe ultra-heat pasteurization, skimming, reconstituting with powdered solids, and weeks in transit before reaching your refrigerator.
+          </p>
+          <p class="text-slate-600 leading-relaxed">
+            <strong>freshmilksource</strong> eliminates the corporate middle-tier. We partner with vetted multigenerational dairy sanctuaries. We milk at dawn, instantly chill to eliminate microbial multiplication, bottle in non-reactive glass, and place it at your doorstep before your coffee brews.
+          </p>
+
+          <div class="space-y-3 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </div>
+              <p class="text-sm text-slate-700 font-medium"><strong>Direct Farm Traceability:</strong> Scan the QR code on every bottle cap to inspect that day's farm lot, milking time, and FAT/SNF certificate.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </div>
+              <p class="text-sm text-slate-700 font-medium"><strong>Easy to Digest A2 Beta-Casein:</strong> Gentle on sensitive stomachs, ideal for toddlers, seniors, and lactose-sensitive individuals.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </div>
+              <p class="text-sm text-slate-700 font-medium"><strong>Zero Single-Use Plastics:</strong> Return empty glass bottles during tomorrow's delivery; we clean, sanitize, and reuse.</p>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <a href="#quality" class="inline-flex items-center gap-2 text-brand-700 font-bold hover:text-brand-800 group text-sm">
+              <span>Read our 24-point purity verification protocol</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Product Showcase Section -->
+  <section id="products" class="py-20 bg-milk-ivory/60 border-t border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold mb-3">Fresh Harvest Collection</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">Pure Dairy, As It Was Meant To Taste</h2>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">Delivered fresh every morning. Add to subscription or order one-off artisanal batches.</p>
+        
+        <!-- Category Filters -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mt-8" id="product-filters">
+          <button class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-brand-700 text-white shadow-sm" data-category="all">
+            All Products (6)
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-category="milk">
+            Fresh Milk
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-category="artisanal">
+            Artisanal & Ghee
+          </button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-category="fermented">
+            Curd & Paneer
+          </button>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
+        
+        <!-- Product Card 1 -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col" data-category="milk">
+          <div class="relative overflow-hidden h-56 bg-slate-100 group">
+            <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=700&q=80" alt="A2 Raw Cow Milk Bottle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-brand-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow">
+              Bestseller
+            </span>
+            <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-semibold px-2 py-1 rounded-lg shadow-sm">
+              1 Liter Glass
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold text-brand-600 uppercase tracking-wide">Pure A2 Certified</span>
+                <div class="flex items-center text-amber-400 text-xs font-bold gap-1">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i> 4.9 (1.2k)
+                </div>
+              </div>
+              <h3 class="font-display font-bold text-xl text-slate-900">Raw A2 Gir Cow Milk</h3>
+              <p class="text-slate-500 text-xs mt-1.5 leading-relaxed">
+                Untouched by human hands. Rich natural cream top, easy digestion, high beta-carotene with natural golden tint.
+              </p>
+              
+              <div class="mt-4 flex items-center gap-4 text-xs text-slate-600 border-t border-slate-100 pt-3">
+                <span>Fat: <strong>4.2% - 4.8%</strong></span>
+                <span>SNF: <strong>8.8% min</strong></span>
+                <span>Cold-Chain: <strong>4°C</strong></span>
+              </div>
+            </div>
+
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400 block">Daily Plan Price</span>
+                <span class="text-2xl font-extrabold text-slate-900">$2.40 <span class="text-xs font-normal text-slate-500">/ liter</span></span>
+              </div>
+              <button 
+                class="add-to-cart-btn px-4 py-2.5 rounded-xl bg-brand-700 text-white font-semibold text-xs hover:bg-brand-800 transition-colors flex items-center gap-1.5 shadow-sm shadow-brand-700/20"
+                data-id="1"
+                data-name="Raw A2 Gir Cow Milk (1L)"
+                data-price="2.40"
+                data-unit="bottle"
+              >
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i> Add to Daily
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col" data-category="milk">
+          <div class="relative overflow-hidden h-56 bg-slate-100 group">
+            <img src="https://images.unsplash.com/photo-1528750997573-59b89d56f4f7?auto=format&fit=crop&w=700&q=80" alt="Farm Fresh Buffalo Milk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-slate-800 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow">
+              High Cream 7%
+            </span>
+            <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-semibold px-2 py-1 rounded-lg shadow-sm">
+              1 Liter Glass
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold text-brand-600 uppercase tracking-wide">Creamy & Thick</span>
+                <div class="flex items-center text-amber-400 text-xs font-bold gap-1">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i> 4.8 (890)
+                </div>
+              </div>
+              <h3 class="font-display font-bold text-xl text-slate-900">Murrah Farm Buffalo Milk</h3>
+              <p class="text-slate-500 text-xs mt-1.5 leading-relaxed">
+                Decadently creamy and dense. Perfect for artisanal tea, thick espresso lattes, homemade curd, and traditional desserts.
+              </p>
+              
+              <div class="mt-4 flex items-center gap-4 text-xs text-slate-600 border-t border-slate-100 pt-3">
+                <span>Fat: <strong>6.8% - 7.5%</strong></span>
+                <span>SNF: <strong>9.2% min</strong></span>
+                <span>Unpasteurized</span>
+              </div>
+            </div>
+
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400 block">Daily Plan Price</span>
+                <span class="text-2xl font-extrabold text-slate-900">$2.60 <span class="text-xs font-normal text-slate-500">/ liter</span></span>
+              </div>
+              <button 
+                class="add-to-cart-btn px-4 py-2.5 rounded-xl bg-brand-700 text-white font-semibold text-xs hover:bg-brand-800 transition-colors flex items-center gap-1.5 shadow-sm shadow-brand-700/20"
+                data-id="2"
+                data-name="Murrah Farm Buffalo Milk (1L)"
+                data-price="2.60"
+                data-unit="bottle"
+              >
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i> Add to Daily
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col" data-category="artisanal">
+          <div class="relative overflow-hidden h-56 bg-slate-100 group">
+            <img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=700&q=80" alt="Bilona Cow Ghee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-amber-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow">
+              Vedic Bilona Method
+            </span>
+            <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-semibold px-2 py-1 rounded-lg shadow-sm">
+              500ml Jar
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold text-amber-600 uppercase tracking-wide">Artisanal Golden Batch</span>
+                <div class="flex items-center text-amber-400 text-xs font-bold gap-1">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i> 5.0 (640)
+                </div>
+              </div>
+              <h3 class="font-display font-bold text-xl text-slate-900">A2 Cultured Golden Ghee</h3>
+              <p class="text-slate-500 text-xs mt-1.5 leading-relaxed">
+                Handcrafted from cultured A2 curd, slow-simmered on low firewood flame. Nutty aroma with fine granular texture.
+              </p>
+              
+              <div class="mt-4 flex items-center gap-4 text-xs text-slate-600 border-t border-slate-100 pt-3">
+                <span>Cultured Curd churned</span>
+                <span>Rich in Butyric acid</span>
+              </div>
+            </div>
+
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400 block">Single Purchase</span>
+                <span class="text-2xl font-extrabold text-slate-900">$18.00 <span class="text-xs font-normal text-slate-500">/ jar</span></span>
+              </div>
+              <button 
+                class="add-to-cart-btn px-4 py-2.5 rounded-xl bg-brand-700 text-white font-semibold text-xs hover:bg-brand-800 transition-colors flex items-center gap-1.5 shadow-sm shadow-brand-700/20"
+                data-id="3"
+                data-name="A2 Cultured Golden Ghee (500ml)"
+                data-price="18.00"
+                data-unit="jar"
+              >
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i> Add to Box
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col" data-category="fermented">
+          <div class="relative overflow-hidden h-56 bg-slate-100 group">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=80" alt="Thick Set Natural Curd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow">
+              Live Probiotics
+            </span>
+            <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-semibold px-2 py-1 rounded-lg shadow-sm">
+              500g Clay Pot
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold text-brand-600 uppercase tracking-wide">Slow Set In Earthenware</span>
+                <div class="flex items-center text-amber-400 text-xs font-bold gap-1">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i> 4.9 (410)
+                </div>
+              </div>
+              <h3 class="font-display font-bold text-xl text-slate-900">Earthen-Pot Set Curd (Dahi)</h3>
+              <p class="text-slate-500 text-xs mt-1.5 leading-relaxed">
+                Set naturally with heirloom cultures inside unglazed porous clay pots that absorb extra whey for supreme firmness.
+              </p>
+              
+              <div class="mt-4 flex items-center gap-4 text-xs text-slate-600 border-t border-slate-100 pt-3">
+                <span>Zero gelatin or thickener</span>
+                <span>Active cultures</span>
+              </div>
+            </div>
+
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400 block">Fresh Morning Pack</span>
+                <span class="text-2xl font-extrabold text-slate-900">$3.20 <span class="text-xs font-normal text-slate-500">/ pot</span></span>
+              </div>
+              <button 
+                class="add-to-cart-btn px-4 py-2.5 rounded-xl bg-brand-700 text-white font-semibold text-xs hover:bg-brand-800 transition-colors flex items-center gap-1.5 shadow-sm shadow-brand-700/20"
+                data-id="4"
+                data-name="Earthen-Pot Set Curd (500g)"
+                data-price="3.20"
+                data-unit="pot"
+              >
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i> Add to Box
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col" data-category="fermented">
+          <div class="relative overflow-hidden h-56 bg-slate-100 group">
+            <img src="https://images.unsplash.com/photo-1559561853-08451507cbe7?auto=format&fit=crop&w=700&q=80" alt="Fresh Malai Paneer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-brand-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow">
+              Same-Day Crafted
+            </span>
+            <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-semibold px-2 py-1 rounded-lg shadow-sm">
+              250g Block
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold text-brand-600 uppercase tracking-wide">Soft & Spongy</span>
+                <div class="flex items-center text-amber-400 text-xs font-bold gap-1">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i> 4.9 (530)
+                </div>
+              </div>
+              <h3 class="font-display font-bold text-xl text-slate-900">Fresh Farm Malai Paneer</h3>
+              <p class="text-slate-500 text-xs mt-1.5 leading-relaxed">
+                Curdled naturally with fresh lemon juice and cold-pressed. Unmatched pillow-soft texture with rich dairy sweetness.
+              </p>
+              
+              <div class="mt-4 flex items-center gap-4 text-xs text-slate-600 border-t border-slate-100 pt-3">
+                <span>High Protein: 18g/100g</span>
+                <span>Vacuum Sealed Fresh</span>
+              </div>
+            </div>
+
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400 block">Same-Day Batch</span>
+                <span class="text-2xl font-extrabold text-slate-900">$4.50 <span class="text-xs font-normal text-slate-500">/ pack</span></span>
+              </div>
+              <button 
+                class="add-to-cart-btn px-4 py-2.5 rounded-xl bg-brand-700 text-white font-semibold text-xs hover:bg-brand-800 transition-colors flex items-center gap-1.5 shadow-sm shadow-brand-700/20"
+                data-id="5"
+                data-name="Fresh Malai Paneer (250g)"
+                data-price="4.50"
+                data-unit="pack"
+              >
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i> Add to Box
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col" data-category="milk">
+          <div class="relative overflow-hidden h-56 bg-slate-100 group">
+            <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=700&q=80" alt="Toned Gentle Pasteurized Milk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 bg-sky-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg uppercase tracking-wider shadow">
+              Low-Fat 1.5%
+            </span>
+            <span class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-semibold px-2 py-1 rounded-lg shadow-sm">
+              1 Liter Glass
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold text-sky-700 uppercase tracking-wide">Gentle Low-Temp Pasteurization</span>
+                <div class="flex items-center text-amber-400 text-xs font-bold gap-1">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i> 4.7 (310)
+                </div>
+              </div>
+              <h3 class="font-display font-bold text-xl text-slate-900">Gentle Toned Fresh Milk</h3>
+              <p class="text-slate-500 text-xs mt-1.5 leading-relaxed">
+                Light and refreshing for everyday fitness and calorie management. Retains vitamins and live enzymes through gentle vat pasteurization.
+              </p>
+              
+              <div class="mt-4 flex items-center gap-4 text-xs text-slate-600 border-t border-slate-100 pt-3">
+                <span>Fat: <strong>1.5%</strong></span>
+                <span>63°C Vat Pasteurization</span>
+              </div>
+            </div>
+
+            <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-400 block">Daily Plan Price</span>
+                <span class="text-2xl font-extrabold text-slate-900">$2.10 <span class="text-xs font-normal text-slate-500">/ liter</span></span>
+              </div>
+              <button 
+                class="add-to-cart-btn px-4 py-2.5 rounded-xl bg-brand-700 text-white font-semibold text-xs hover:bg-brand-800 transition-colors flex items-center gap-1.5 shadow-sm shadow-brand-700/20"
+                data-id="6"
+                data-name="Gentle Toned Fresh Milk (1L)"
+                data-price="2.10"
+                data-unit="bottle"
+              >
+                <i data-lucide="plus" class="w-3.5 h-3.5"></i> Add to Daily
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Purity Comparison & Protocol Section -->
+  <section id="quality" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold mb-3">Transparency Benchmark</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+          How freshmilksource compares to commercial retail milk
+        </h2>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">
+          See why over 8,000 households switched away from plastic pouches and supermarket cartons.
+        </p>
+      </div>
+
+      <!-- Comparison Matrix Table -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm mb-16">
+        <table class="w-full text-left border-collapse min-w-[640px]">
+          <thead>
+            <tr class="border-b border-slate-200 bg-slate-50/70">
+              <th class="py-4 px-6 text-sm font-bold text-slate-800 w-1/3">Quality Standard</th>
+              <th class="py-4 px-6 text-sm font-bold text-brand-700 bg-brand-50/60 w-1/3 border-x border-brand-100">
+                <div class="flex items-center gap-2">
+                  <div class="w-2.5 h-2.5 rounded-full bg-brand-500"></div>
+                  <span>freshmilksource</span>
+                </div>
+              </th>
+              <th class="py-4 px-6 text-sm font-bold text-slate-500 w-1/3">Commercial Supermarket Milk</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 text-sm">
+            <tr>
+              <td class="py-4 px-6 font-semibold text-slate-800">Milking to Doorstep Duration</td>
+              <td class="py-4 px-6 font-medium text-brand-800 bg-brand-50/30 border-x border-brand-100">
+                <span class="inline-flex items-center gap-1.5 text-brand-700 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Under 4 Hours</span>
+              </td>
+              <td class="py-4 px-6 text-slate-500">48 to 120+ Hours (Multi-depot storage)</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-semibold text-slate-800">Packaging Type</td>
+              <td class="py-4 px-6 font-medium text-brand-800 bg-brand-50/30 border-x border-brand-100">
+                <span class="inline-flex items-center gap-1.5 text-brand-700 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> High-grade Glass Bottles (100% Recycled)</span>
+              </td>
+              <td class="py-4 px-6 text-slate-500">Low-grade plastic pouches / wax lined tetra</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-semibold text-slate-800">Hormone & Antibiotic Screening</td>
+              <td class="py-4 px-6 font-medium text-brand-800 bg-brand-50/30 border-x border-brand-100">
+                <span class="inline-flex items-center gap-1.5 text-brand-700 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> 100% Zero-tolerance daily lab test</span>
+              </td>
+              <td class="py-4 px-6 text-slate-500">Batched collective testing with permissible residues</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-semibold text-slate-800">Processing & Homogenization</td>
+              <td class="py-4 px-6 font-medium text-brand-800 bg-brand-50/30 border-x border-brand-100">
+                <span class="inline-flex items-center gap-1.5 text-brand-700 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Non-homogenized; natural fat structure intact</span>
+              </td>
+              <td class="py-4 px-6 text-slate-500">High-pressure mechanical shearing of fat globules</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-semibold text-slate-800">Cow Breed & Feed</td>
+              <td class="py-4 px-6 font-medium text-brand-800 bg-brand-50/30 border-x border-brand-100">
+                <span class="inline-flex items-center gap-1.5 text-brand-700 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Indigenous A2 breeds; 100% green pasture</span>
+              </td>
+              <td class="py-4 px-6 text-slate-500">Industrial feed lots, grain supplements, mixed genetic strains</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-semibold text-slate-800">Reconstituted Milk Powder</td>
+              <td class="py-4 px-6 font-medium text-brand-800 bg-brand-50/30 border-x border-brand-100">
+                <span class="inline-flex items-center gap-1.5 text-brand-700 font-bold"><i data-lucide="check-circle-2" class="w-4 h-4"></i> Strictly NEVER used</span>
+              </td>
+              <td class="py-4 px-6 text-slate-500">Commonly used to standardize seasonal SNF metrics</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 4-Step Process Pipeline -->
+      <div class="grid md:grid-cols-4 gap-6 relative">
+        
+        <div class="bg-milk-cream p-6 rounded-2xl border border-slate-200/80 space-y-3 relative">
+          <div class="w-10 h-10 rounded-xl bg-brand-700 text-white flex items-center justify-center font-display font-extrabold text-base">
+            01
+          </div>
+          <h4 class="font-display font-bold text-lg text-slate-900">4:00 AM Morning Milking</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Automated cluster milking machines ensure no human hands touch the raw milk, preventing airborne and skin bacterial contamination.
+          </p>
+        </div>
+
+        <div class="bg-milk-cream p-6 rounded-2xl border border-slate-200/80 space-y-3 relative">
+          <div class="w-10 h-10 rounded-xl bg-brand-700 text-white flex items-center justify-center font-display font-extrabold text-base">
+            02
+          </div>
+          <h4 class="font-display font-bold text-lg text-slate-900">Rapid Chilling to 4°C</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Within 15 minutes, milk is passed through food-grade plate chillers bringing temperature down immediately to inhibit microbial proliferation.
+          </p>
+        </div>
+
+        <div class="bg-milk-cream p-6 rounded-2xl border border-slate-200/80 space-y-3 relative">
+          <div class="w-10 h-10 rounded-xl bg-brand-700 text-white flex items-center justify-center font-display font-extrabold text-base">
+            03
+          </div>
+          <h4 class="font-display font-bold text-lg text-slate-900">Steam-Sanitized Glass</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Milk is transferred directly into sterile glass bottles and sealed with hermetic aluminum caps carrying batch QR codes.
+          </p>
+        </div>
+
+        <div class="bg-milk-cream p-6 rounded-2xl border border-slate-200/80 space-y-3 relative">
+          <div class="w-10 h-10 rounded-xl bg-brand-700 text-white flex items-center justify-center font-display font-extrabold text-base">
+            04
+          </div>
+          <h4 class="font-display font-bold text-lg text-slate-900">7:00 AM Insulated Drop</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Transported in temperature-controlled reefers and placed in your insulated doorstep milk pouch before dawn.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Subscription & Plan Calculator -->
+  <section id="calculator" class="py-20 bg-gradient-to-b from-brand-50/50 to-white border-y border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold mb-3">Custom Delivery Builder</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">Calculate Your Monthly Fresh Supply</h2>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">Pause, modify, or cancel anytime with one tap. Zero lock-in contracts.</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl border border-slate-200 p-6 sm:p-10">
+        
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+          
+          <!-- Controls (Left) -->
+          <div class="md:col-span-7 space-y-6">
+            
+            <!-- Step 1: Milk Choice -->
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">1. Select Your Milk Type</label>
+              <div class="grid grid-cols-2 gap-3" id="calc-milk-type">
+                <button type="button" class="calc-type-btn active p-3 rounded-xl border-2 border-brand-600 bg-brand-50/50 text-left transition-all" data-price="2.40" data-name="Raw A2 Gir Cow Milk">
+                  <div class="font-bold text-sm text-slate-900">Raw A2 Cow</div>
+                  <div class="text-xs text-brand-700 font-semibold">$2.40 / L</div>
+                </button>
+                <button type="button" class="calc-type-btn p-3 rounded-xl border-2 border-slate-200 bg-white hover:border-slate-300 text-left transition-all" data-price="2.60" data-name="Murrah Buffalo Milk">
+                  <div class="font-bold text-sm text-slate-900">Buffalo Milk</div>
+                  <div class="text-xs text-slate-500 font-semibold">$2.60 / L</div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Daily Liters Slider -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-xs font-bold text-slate-500 uppercase tracking-wider">2. Daily Quantity</label>
+                <span id="slider-val-display" class="text-base font-extrabold text-brand-700">1.0 Liter / day</span>
+              </div>
+              <input 
+                type="range" 
+                id="quantity-slider" 
+                min="0.5" 
+                max="5.0" 
+                step="0.5" 
+                value="1.0" 
+                class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600"
+              />
+              <div class="flex justify-between text-[11px] text-slate-400 font-semibold mt-1.5">
+                <span>0.5L (1-2 People)</span>
+                <span>2L (Family of 4)</span>
+                <span>5L (Large Family)</span>
+              </div>
+            </div>
+
+            <!-- Step 3: Frequency -->
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">3. Delivery Frequency</label>
+              <div class="grid grid-cols-3 gap-2.5" id="calc-frequency">
+                <button type="button" class="calc-freq-btn active py-2.5 px-2 rounded-xl border-2 border-brand-600 bg-brand-50/50 text-center font-bold text-xs text-brand-900" data-days="30" data-label="Everyday">
+                  Daily (30 days)
+                </button>
+                <button type="button" class="calc-freq-btn py-2.5 px-2 rounded-xl border-2 border-slate-200 bg-white hover:border-slate-300 text-center font-bold text-xs text-slate-700" data-days="15" data-label="Alternate Days">
+                  Alternate Days (15)
+                </button>
+                <button type="button" class="calc-freq-btn py-2.5 px-2 rounded-xl border-2 border-slate-200 bg-white hover:border-slate-300 text-center font-bold text-xs text-slate-700" data-days="22" data-label="Weekdays Only">
+                  Weekdays (22)
+                </button>
+              </div>
+            </div>
+
+            <!-- Perks Checklist -->
+            <div class="pt-2 text-xs text-slate-600 space-y-1.5">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Free insulated Doorstep Delivery Pouch included ($15 value)
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Pause or resume with 10PM cutoff for next-morning change
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Summary Card (Right) -->
+          <div class="md:col-span-5 bg-gradient-to-br from-brand-800 to-brand-dark text-white p-7 rounded-2xl shadow-xl flex flex-col justify-between h-full space-y-6">
+            <div>
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 text-brand-300 text-[11px] font-semibold mb-3">
+                <i data-lucide="calculator" class="w-3.5 h-3.5"></i> Estimated Estimate
+              </div>
+              
+              <h3 class="font-display font-bold text-xl" id="summary-milk-title">Raw A2 Gir Cow Milk</h3>
+              <p class="text-xs text-slate-300 mt-1" id="summary-meta">1.0L delivered Daily (30 deliveries/mo)</p>
+            </div>
+
+            <div class="space-y-3 border-y border-white/15 py-4">
+              <div class="flex justify-between text-xs text-slate-300">
+                <span>Per bottle cost:</span>
+                <span class="font-bold text-white" id="summary-unit-price">$2.40</span>
+              </div>
+              <div class="flex justify-between text-xs text-slate-300">
+                <span>Total monthly volume:</span>
+                <span class="font-bold text-white" id="summary-volume">30 Liters</span>
+              </div>
+              <div class="flex justify-between text-xs text-emerald-300">
+                <span>First month promotion:</span>
+                <span class="font-bold">15% OFF applied</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex items-baseline justify-between mb-4">
+                <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Monthly Total:</span>
+                <div class="text-right">
+                  <span class="line-through text-xs text-slate-400 mr-1.5" id="summary-original-price">$72.00</span>
+                  <span class="text-3xl font-extrabold text-white" id="summary-final-price">$61.20</span>
+                </div>
+              </div>
+
+              <a href="#trial" class="w-full py-3.5 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold text-sm text-center block transition-all shadow-lg active:scale-95">
+                Lock In Plan & Start Trial
+              </a>
+              <p class="text-[10px] text-center text-slate-400 mt-2">Zero payment required for your first trial bottle.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Eco-Friendly Bottle Program Section -->
+  <section id="sustainability" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="inline-block px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold">Closed Loop Ecology</span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-snug">
+            Glass bottles keep milk colder, preserve flavor, and save landfill tons.
+          </h2>
+          <p class="text-slate-600 leading-relaxed">
+            Plastic leach chemicals like phthalates and microplastics into dairy fat. Glass is completely inert, impermeable, and retains temperature twice as long.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
+              <div class="text-2xl font-extrabold font-display text-brand-700">0%</div>
+              <div class="text-xs font-bold text-slate-800 mt-0.5">Microplastic Leaching</div>
+              <p class="text-[11px] text-slate-500 mt-1">Chemical-free contact surface ensures genuine dairy purity.</p>
+            </div>
+            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50">
+              <div class="text-2xl font-extrabold font-display text-brand-700">40x</div>
+              <div class="text-xs font-bold text-slate-800 mt-0.5">Reusability Cycle</div>
+              <p class="text-[11px] text-slate-500 mt-1">Each heavy pharmaceutical-grade bottle is washed, sterilized, and reused up to 40 times.</p>
+            </div>
+          </div>
+
+          <div class="bg-brand-50 p-5 rounded-2xl border border-brand-200/80 flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center shrink-0">
+              <i data-lucide="rotate-ccw" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">How the Bottle Swap Works:</h4>
+              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                Rinse your empty bottle and place it in your doorstep insulated pouch before sleeping. Our morning delivery partner collects the empty bottle while dropping today's chilled bottle. Simple, effortless, and zero trash.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+            <img 
+              src="https://images.unsplash.com/photo-1517093708365-513689fa688f?auto=format&fit=crop&w=800&q=80" 
+              alt="Sustainable cold milk bottles being delivered" 
+              class="w-full h-[450px] object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <div class="text-lg font-bold font-display">Over 1,200,000 Plastic Pouches Prevented</div>
+              <p class="text-xs text-slate-200 mt-1">Together with our members across the region since 2024.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials Section -->
+  <section class="py-20 bg-milk-cream/60 border-t border-slate-200/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold mb-3">Family Verified</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">Loved by Mothers, Chefs & Fitness Enthusiasts</h2>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">Real stories from daily subscribers who noticed the genuine difference within a week.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-100 shadow-md space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "My 5-year-old always had mild cramps with commercial milk. After switching to freshmilksource A2 Cow Milk 3 months ago, he drinks it happily every morning with zero bloat. The thick cream layer on boiling is unbelievable!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Sarah Miller">
+            <div>
+              <h5 class="text-sm font-bold text-slate-900">Sarah Jenkins</h5>
+              <p class="text-[11px] text-slate-400">Subscribed for 2L Daily A2 Milk</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-100 shadow-md space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "As an espresso roaster and cafe owner, milk chemistry is everything. Their Buffalo Milk produces silky microfoam with natural sweet notes that enhance coffee acidity instead of masking it. Truly artisanal."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80" alt="David Sterling">
+            <div>
+              <h5 class="text-sm font-bold text-slate-900">David Sterling</h5>
+              <p class="text-[11px] text-slate-400">Specialty Coffee Shop Founder</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-100 shadow-md space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "The glass bottle exchange is so seamless. I walk out at 6:45 AM, and my cold bottle is waiting in the cooler bag. Scanning the QR code to see the actual test results of the morning batch gives complete peace of mind."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Dr. Priya Mehta">
+            <div>
+              <h5 class="text-sm font-bold text-slate-900">Dr. Priya Sharma</h5>
+              <p class="text-[11px] text-slate-400">Holistic Nutritionist & Mom of 2</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Free Trial & Daily Delivery Signup Section -->
+  <section id="trial" class="py-20 bg-brand-dark text-white relative overflow-hidden">
+    <!-- Background patterns -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#22c55e_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left info -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 text-brand-300 border border-brand-500/30 text-xs font-semibold">
+            Limited Daily Quota per Pincode
+          </div>
+          <h2 class="font-display font-extrabold text-3xl sm:text-5xl tracking-tight leading-tight">
+            Taste the difference tomorrow morning.
+          </h2>
+          <p class="text-slate-300 leading-relaxed text-base sm:text-lg">
+            Experience our 100% pure A2 Gir Cow Milk with a complimentary 500ml glass sample bottle delivered right to your apartment or home door before 7 AM.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-center gap-3 text-sm text-slate-200">
+              <div class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+              <span>No credit card required for sample dispatch</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-slate-200">
+              <div class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+              <span>Free insulated porch bag provided on enrollment</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-slate-200">
+              <div class="w-6 h-6 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs font-bold shrink-0">✓</div>
+              <span>WhatsApp notifications when the drop occurs at your door</span>
+            </div>
+          </div>
+
+          <div class="pt-4 flex items-center gap-4">
+            <div class="flex items-center gap-2 text-xs text-brand-300">
+              <i data-lucide="shield-check" class="w-4 h-4"></i> FSSAI Certified Lab Standard
+            </div>
+            <span class="text-slate-600">•</span>
+            <div class="flex items-center gap-2 text-xs text-brand-300">
+              <i data-lucide="clock" class="w-4 h-4"></i> Cutoff 10:00 PM Tonight
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form Card -->
+        <div class="lg:col-span-6">
+          <div class="bg-white text-slate-900 rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-100">
+            <h3 class="font-display font-extrabold text-2xl text-slate-900">Request Your Morning Sample</h3>
+            <p class="text-xs text-slate-500 mt-1">Check delivery availability in your sector & secure tomorrow's drop.</p>
+
+            <form id="trial-form" class="mt-6 space-y-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="trial-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Full Name</label>
+                  <input type="text" id="trial-name" required placeholder="Jane Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+                <div>
+                  <label for="trial-phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Phone Number</label>
+                  <input type="tel" id="trial-phone" required placeholder="+1 (555) 000-0000" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+              </div>
+
+              <div>
+                <label for="trial-address" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Delivery Address & Apartment / Unit #</label>
+                <input type="text" id="trial-address" required placeholder="Flat 402, Oakwood Residences, 5th Avenue" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="trial-pincode" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Pincode / ZIP Code</label>
+                  <input type="text" id="trial-pincode" required placeholder="94016" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+                <div>
+                  <label for="trial-pref" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Preferred Sample</label>
+                  <select id="trial-pref" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white">
+                    <option value="cow">500ml Raw A2 Gir Cow Milk</option>
+                    <option value="buffalo">500ml Murrah Buffalo Milk</option>
+                    <option value="combo">Duo Mini Trial (Both 250ml)</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-lg shadow-brand-700/25 transition-all active:scale-95 flex items-center justify-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+                <span>Confirm Tomorrow's 7 AM Delivery</span>
+              </button>
+
+              <p class="text-[11px] text-center text-slate-400">
+                By submitting, you agree to receive SMS delivery alerts. We never sell your personal data.
+              </p>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14">
+        <span class="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold mb-3">Frequently Asked Questions</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">Got Questions? We Have Answers.</h2>
+        <p class="text-slate-600 mt-2 text-sm">Everything you need to know about freshmilksource milk, subscriptions, and delivery.</p>
+      </div>
+
+      <div class="space-y-4" id="faq-accordion">
+        
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between font-bold text-slate-900 hover:text-brand-700 bg-white">
+            <span class="text-base">What is the difference between A1 and A2 milk?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+            A2 milk comes strictly from cows that produce only the A2 beta-casein protein variant (such as indigenous Gir, Sahiwal, and Red Sindhi breeds). Unlike modern Western A1 milk, which releases the peptide BCM-7 during digestion linked to discomfort and inflammation, A2 milk is easily digestible and metabolizes smoothly just like human mother's milk.
+          </div>
+        </div>
+
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between font-bold text-slate-900 hover:text-brand-700 bg-white">
+            <span class="text-base">Do I need to boil the milk when it arrives?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+            For our Raw A2 Milk, we recommend a gentle single-boil on low heat to preserve beneficial enzymes and vitamins while ensuring complete home hygiene. For our Gently Pasteurized options, you can enjoy it straight out of the bottle chilled or warm!
+          </div>
+        </div>
+
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between font-bold text-slate-900 hover:text-brand-700 bg-white">
+            <span class="text-base">What happens if I go on vacation or need to pause deliveries?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+            You have 100% control. You can pause, modify, or add extra bottles via our simple customer dashboard or via our WhatsApp concierge until 10:00 PM the night before. Unused balance is simply carried over to next month.
+          </div>
+        </div>
+
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between font-bold text-slate-900 hover:text-brand-700 bg-white">
+            <span class="text-base">How does the empty glass bottle collection work?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+            Every subscriber receives an insulated freshmilksource doorstep tote bag. Simply rinse your empty glass bottle with water and place it into the tote at night. When our delivery partner drops your fresh cold bottle in the morning, they swap and take the empty bottle back to our automated sanitizing facility.
+          </div>
+        </div>
+
+        <div class="faq-item border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+          <button class="faq-toggle w-full p-5 text-left flex items-center justify-between font-bold text-slate-900 hover:text-brand-700 bg-white">
+            <span class="text-base">Where are freshmilksource partner farms located?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-slate-400 transition-transform duration-200 shrink-0"></i>
+          </button>
+          <div class="faq-content hidden px-5 pb-5 text-sm text-slate-600 border-t border-slate-100 pt-3 leading-relaxed">
+            Our farms are situated within a strict 60-kilometer radius of your city perimeter in lush organic rural corridors. This strict proximity limit is how we guarantee delivery under 4 hours from milking. You are always welcome to schedule a weekend farm tour with your family!
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-300 pt-16 pb-12 border-t border-slate-900 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Brand column -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="#" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-brand-700 to-brand-500 flex items-center justify-center text-white">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" fill="white"/>
+              </svg>
+            </div>
+            <span class="font-display font-extrabold text-2xl tracking-tight text-white">
+              freshmilk<span class="text-brand-500">source</span>
+            </span>
+          </a>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+            Restoring the sanctity of pure morning milk. Fresh from ethical pasture-raised native cows directly into sterile glass bottles at your doorstep by 7 AM.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-600 flex items-center justify-center text-slate-400 hover:text-white transition-colors" aria-label="Instagram">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-600 flex items-center justify-center text-slate-400 hover:text-white transition-colors" aria-label="Facebook">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-600 flex items-center justify-center text-slate-400 hover:text-white transition-colors" aria-label="Twitter">
+              <i data-lucide="twitter" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-600 flex items-center justify-center text-slate-400 hover:text-white transition-colors" aria-label="YouTube">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links column 1 -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Dairy Products</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#products" class="hover:text-brand-400 transition-colors">Raw A2 Cow Milk</a></li>
+            <li><a href="#products" class="hover:text-brand-400 transition-colors">Murrah Buffalo Milk</a></li>
+            <li><a href="#products" class="hover:text-brand-400 transition-colors">A2 Vedic Cultured Ghee</a></li>
+            <li><a href="#products" class="hover:text-brand-400 transition-colors">Clay Pot Set Dahi</a></li>
+            <li><a href="#products" class="hover:text-brand-400 transition-colors">Farm Fresh Malai Paneer</a></li>
+          </ul>
+        </div>
+
+        <!-- Links column 2 -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Ethical Standards</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#about" class="hover:text-brand-400 transition-colors">Grass-Fed Herds</a></li>
+            <li><a href="#quality" class="hover:text-brand-400 transition-colors">24-Point Daily Lab Test</a></li>
+            <li><a href="#sustainability" class="hover:text-brand-400 transition-colors">Glass Bottle Program</a></li>
+            <li><a href="#quality" class="hover:text-brand-400 transition-colors">Cold Chain 4°C Logistics</a></li>
+            <li><a href="#about" class="hover:text-brand-400 transition-colors">Calf-First Dairying</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter / Contact -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Direct Concierge</h4>
+          <p class="text-xs text-slate-400">Questions about your sector delivery or dietary requirements?</p>
+          <div class="text-xs space-y-1.5 text-slate-300">
+            <div class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-400"></i> +1 (800) 428-MILK
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-400"></i> care@freshmilksource.com
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-400"></i> Valley Meadow Sanctuary #14
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom copyright & legal -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div>
+          &copy; <span id="current-year"></span> freshmilksource. All rights reserved. Registered trademark.
+        </div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">Lab Reports</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">FSSAI / FDA License</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Shopping Cart Modal -->
+  <div id="cart-drawer-backdrop" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 hidden transition-opacity opacity-0"></div>
+  <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300">
+    <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-milk-cream">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-brand-700"></i>
+        <h3 class="font-display font-bold text-lg text-slate-900">Your Fresh Basket</h3>
+      </div>
+      <button id="close-cart-btn" class="p-2 text-slate-400 hover:text-slate-700 rounded-lg">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Cart items container -->
+    <div id="cart-items" class="flex-1 overflow-y-auto p-5 space-y-4">
+      <!-- Populated via JS -->
+      <div id="empty-cart-msg" class="py-16 text-center text-slate-400 space-y-3">
+        <i data-lucide="milk" class="w-12 h-12 mx-auto stroke-1 text-slate-300"></i>
+        <p class="text-sm">Your basket is currently empty.</p>
+        <a href="#products" id="start-shopping-btn" class="inline-block text-xs font-semibold text-brand-700 underline underline-offset-4">Explore Morning Harvest</a>
+      </div>
+    </div>
+
+    <!-- Cart Footer -->
+    <div class="p-5 border-t border-slate-100 bg-slate-50 space-y-3">
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-slate-600">Subtotal</span>
+        <span id="cart-subtotal" class="font-bold text-slate-900">$0.00</span>
+      </div>
+      <div class="flex items-center justify-between text-xs text-brand-700">
+        <span>Morning Doorstep Delivery</span>
+        <span class="font-bold uppercase tracking-wider">FREE</span>
+      </div>
+      <div class="pt-2 border-t border-slate-200 flex items-center justify-between text-base">
+        <span class="font-bold text-slate-900">Total</span>
+        <span id="cart-total" class="font-extrabold text-brand-800 text-xl">$0.00</span>
+      </div>
+
+      <button id="checkout-btn" class="w-full py-3.5 px-4 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm shadow-md shadow-brand-700/25 transition-all active:scale-95 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
+        <span>Proceed to Morning Dispatch</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Live Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-xl flex items-center gap-3 border border-slate-800">
+    <div id="toast-icon" class="text-brand-400">
+      <i data-lucide="check-circle" class="w-5 h-5"></i>
+    </div>
+    <div class="text-xs">
+      <div id="toast-title" class="font-bold">Item Added</div>
+      <div id="toast-msg" class="text-slate-300">Added to your basket</div>
+    </div>
+  </div>
+
+  <!-- Floating Recent Order Activity Pill -->
+  <div id="activity-pill" class="fixed bottom-6 left-6 z-30 hidden sm:flex items-center gap-3 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-slate-200/80 max-w-sm transition-all duration-500 transform translate-y-32">
+    <div class="w-9 h-9 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center shrink-0">
+      <i data-lucide="bell" class="w-4 h-4"></i>
+    </div>
+    <div class="text-xs">
+      <div class="font-semibold text-slate-800" id="activity-user">Emma L. from Greenfield</div>
+      <div class="text-slate-500 text-[11px]" id="activity-action">Just started daily 2L A2 Milk delivery • 2m ago</div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

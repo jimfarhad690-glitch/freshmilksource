@@ -1,0 +1,126 @@
+/* Custom styling and enhancements for freshmilksource */
+
+/* Base font adjustments */
+body {
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom slider input styling */
+input[type=range] {
+  -webkit-appearance: none;
+  background: #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #15803d;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(21, 128, 61, 0.4);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  border: 2px solid #ffffff;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #166534;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #15803d;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(21, 128, 61, 0.4);
+  border: 2px solid #ffffff;
+}
+
+/* Product cards subtle hover transition */
+.product-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Dropdown / accordion animations */
+.faq-content {
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Custom button shimmer effect */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: rotate(30deg);
+  animation: shimmer-effect 4s infinite linear;
+}
+
+@keyframes shimmer-effect {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  100% { transform: translateX(100%) rotate(30deg); }
+}
+
+/* Badge pulse animation */
+@keyframes soft-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+  }
+}
+
+.glow-subtle {
+  animation: soft-glow 3s infinite ease-in-out;
+}
+
